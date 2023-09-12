@@ -3,7 +3,7 @@
 
 - 🌱 I’m currently learning **Tensorflow, PyTorch, Keras, Optimization, Deep Learning**
 
-- 👨‍💻 All of my projects are available at [https://github.com/krishnatejhas](https://github.com/krishnatejhas)
+- 👨‍💻 All of my projects are available at [https://github.com/krishnatejhas?tab=repositories)
 
 - 💬 Ask me about **Machine Learning**
 
