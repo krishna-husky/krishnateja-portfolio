@@ -7,7 +7,7 @@
 
 - 💬 Ask me about **Machine Learning**
 
-- 📫 How to reach me **samudrala.k@northeastern.edu**
+- 📫 How to reach me **krishnatejasamudrala.work@gmail.com**
 
 - ⚡ Fun fact **I am passionate about leveraging my skills and experience to drive value and growth for organizations. Let's connect!**
 
