@@ -1,27 +1,98 @@
-<h1 align="center">Hi 👋, I'm Krishna Teja Samudrala</h1>
-<h3 align="center">A passionate Data Science and Engineering Student at Northeastern University</h3>
+## Hi 👋, I'm Surya Pratap Singh! 
+### About me: 
+I am a driven Data enthusiast with a passion for uncovering insights from data and building innovative solutions. With a strong background in Data Analytics Engineering, Computer Science, and extensive experience in Python and SQL, I have developed a diverse skill set that spans machine learning, statistical modeling, and data visualization.
 
-- 🌱 I’m currently learning **Tensorflow, PyTorch, Keras, Optimization, Deep Learning**
+- **🌱 Currently Exploring:** Data Science/ Analytics/ Engineer/ Machine Learning/ Business Intelligence roles <br />
+- **📓 Education:** MS in Data Analytics, Bachelors in Computer Science
+- **💼 Experience:** Data Science and Analytics experience in automation, healthcare, logistics, and finance. <br />
+- **📚 Research:** Published 10 international research papers in Machine Learning and Data Science. <br />
 
-- 👨‍💻 All of my projects are available at [https://github.com/krishnateja-samudrala](https://github.com/krishnateja-samudrala)
+## 🔗 Connect with Me
 
-- 💬 Ask me about **Machine Learning**
+- **Portfolio**: [Surya Pratap Singh](https://suryasingh.me/)
+- **GitHub**: [suryap175](https://github.com/suryap175)
+- **Google Scholar**: [Research Publications](https://scholar.google.com/citations?user=zdz1gRQAAAAJ&hl=en)
 
-- 📫 How to reach me **krishnatejasamudrala.work@gmail.com**
+##
 
-- ⚡ Fun fact **I am passionate about leveraging my skills and experience to drive value and growth for organizations. Let's connect!**
+"Explore my expertise across various domains including Cloud Computing, Database Management, and Programming Languages."
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/krishnatejasamudrala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="krishnatejasamudrala" height="30" width="40" /></a>
-</p>
+## Big Data Technologies
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://azure.microsoft.com/en-in/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://www.elastic.co" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" alt="elasticsearch" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://kubernetes.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40" height="40"/> </a> <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> <a href="https://zapier.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" alt="zapier" width="40" height="40"/> </a> </p>
+![Hadoop](https://img.shields.io/badge/-Hadoop-0078D4?logo=apache-hadoop&logoColor=white)
+![Spark](https://img.shields.io/badge/-Spark-E25A1C?logo=apache-spark&logoColor=white)
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=krishnateja-samudrala&show_icons=true&locale=en&layout=compact" alt="krishnateja-samudrala" /></p>
+## Cloud Computing
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=krishnateja-samudrala&show_icons=true&locale=en" alt="krishnateja-samudrala" /></p>
+![AWS](https://img.shields.io/badge/-AWS-232F3E?logo=amazon-aws&logoColor=white)
+![Azure](https://img.shields.io/badge/-Azure-0078D4?logo=microsoft-azure&logoColor=white)
+![GCP](https://img.shields.io/badge/-GCP-4285F4?logo=google-cloud&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=krishnateja-samudrala&" alt="krishnateja-samudrala" /></p>
+## Database Sources
 
+![MySQL](https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
+![SQL Server](https://img.shields.io/badge/-SQL_Server-CC2927?logo=microsoft-sql-server&logoColor=white)
+
+
+
+## Programming Languages
+
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
+![R](https://img.shields.io/badge/-R-276DC3?logo=r&logoColor=white)
+![C/C++](https://img.shields.io/badge/-C/C++-00599C?logo=c&logoColor=white)
+![SQL](https://img.shields.io/badge/-SQL-4479A1?logo=mysql&logoColor=white)
+![NoSQL](https://img.shields.io/badge/-NoSQL-4DB33D?logo=nosql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
+
+
+## Data Engineering Tools
+
+![Apache Hadoop](https://img.shields.io/badge/-Hadoop-66CCFF?logo=apache-hadoop&logoColor=black)
+![Apache Spark](https://img.shields.io/badge/-Spark-E25A1C?logo=apache-spark&logoColor=white)
+![Databricks](https://img.shields.io/badge/-Databricks-FF3621?logo=databricks&logoColor=white)
+![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?logo=snowflake&logoColor=white)
+![Azure Data Factory](https://img.shields.io/badge/-Azure_Data_Factory-0078D4?logo=microsoft-azure&logoColor=white)
+
+## Data Analytics Tools
+
+![Power BI](https://img.shields.io/badge/-Power_BI-F2C811?logo=power-bi&logoColor=black)
+![Tableau](https://img.shields.io/badge/-Tableau-E97627?logo=tableau&logoColor=white)
+![Excel](https://img.shields.io/badge/-Excel-217346?logo=microsoft-excel&logoColor=white)
+![SPSS](https://img.shields.io/badge/-SPSS-0033A0?logo=spss&logoColor=white)
+![SAS](https://img.shields.io/badge/-SAS-1E2B7C?logo=sas&logoColor=white)
+![Oracle](https://img.shields.io/badge/-Oracle-F80000?logo=oracle&logoColor=white)
+![RStudio](https://img.shields.io/badge/-RStudio-75AADB?logo=rstudio&logoColor=white)
+![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?logo=jupyter&logoColor=white)
+![Google Analytics](https://img.shields.io/badge/-Google_Analytics-E37400?logo=google-analytics&logoColor=white)
+![Alteryx](https://img.shields.io/badge/-Alteryx-0074BF?logo=alteryx&logoColor=white)
+
+## Python Libraries
+
+![NumPy](https://img.shields.io/badge/-NumPy-013243?logo=numpy&logoColor=white)
+![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?logo=opencv&logoColor=white)
+![Scipy](https://img.shields.io/badge/-Scipy-8CAAE6?logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/-Matplotlib-4169E1?logo=matplotlib&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?logo=tensorflow&logoColor=white)
+![Pandas](https://img.shields.io/badge/-Pandas-150458?logo=pandas&logoColor=white)
+![PySpark](https://img.shields.io/badge/-PySpark-E25A1C?logo=apache-spark&logoColor=white)
+![Seaborn](https://img.shields.io/badge/-Seaborn-3776AB?logo=python&logoColor=white)
+![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?logo=plotly&logoColor=white)
+
+
+
+#### Most Used Languages
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=suryap175&layout=compact&theme=radical&langs_count=4)
+
+#### 👀 Visitor Count
+
+![Visitor Count](https://komarev.com/ghpvc/?username=suryap175&color=green&style=flat)
+
+
+
+
+
+Feel free to explore my repositories and connect with me on LinkedIn or check out my portfolio to see my projects and publications!
