@@ -169,6 +169,142 @@
             background-color: var(--warning-color);
             color: white;
         }
+        
+        /* New styles for Core Competencies section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .expertise-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #444;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(54, 188, 247, 0.3);
+        }
+        
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), #64b5f6);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .expertise-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .expertise-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .expertise-title {
+            color: var(--accent-color);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .expertise-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .expertise-item {
+            background-color: rgba(54, 188, 247, 0.1);
+            border: 1px solid rgba(54, 188, 247, 0.3);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+        
+        .expertise-item:hover {
+            background-color: rgba(54, 188, 247, 0.2);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Visual skills chart */
+        .skills-visualization {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+            border-radius: 15px;
+            border: 1px solid #444;
+        }
+        
+        .skill-bar {
+            margin-bottom: 20px;
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .skill-name {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .skill-percentage {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .skill-progress {
+            width: 100%;
+            height: 8px;
+            background-color: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), #64b5f6);
+            border-radius: 4px;
+            transition: width 1.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
     </style>
 </head>
 <body>
@@ -373,15 +509,150 @@
         
         <section>
             <h2>🌟 Core Competencies</h2>
-            <div class="code-block">
-<pre>expertise = {
-    "Data Engineering": ["ETL Pipelines", "Real-time Streaming", "Data Warehousing"],
-    "Cloud Architecture": ["AWS", "Azure", "GCP", "Multi-cloud"],
-    "Big Data": ["Spark", "Kafka", "Hadoop", "Databricks"],
-    "Automation": ["CI/CD", "Infrastructure as Code", "Pipeline Orchestration"],
-    "Analytics": ["Business Intelligence", "Data Visualization", "KPI Dashboards"],
-    "Domains": ["Healthcare", "Banking", "Insurance"]
-}</pre>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <span class="expertise-icon">☁️</span>
+                    <div class="expertise-title">Cloud Architecture</div>
+                    <div class="expertise-items">
+                        <span class="expertise-item">AWS</span>
+                        <span class="expertise-item">Azure</span>
+                        <span class="expertise-item">GCP</span>
+                        <span class="expertise-item">Multi-Cloud</span>
+                        <span class="expertise-item">Serverless</span>
+                        <span class="expertise-item">Microservices</span>
+                    </div>
+                </div>
+                
+                <div class="expertise-card">
+                    <span class="expertise-icon">🔧</span>
+                    <div class="expertise-title">Data Engineering</div>
+                    <div class="expertise-items">
+                        <span class="expertise-item">ETL Pipelines</span>
+                        <span class="expertise-item">Real-time Streaming</span>
+                        <span class="expertise-item">Data Warehousing</span>
+                        <span class="expertise-item">Data Lakes</span>
+                        <span class="expertise-item">CDC</span>
+                        <span class="expertise-item">Data Modeling</span>
+                    </div>
+                </div>
+                
+                <div class="expertise-card">
+                    <span class="expertise-icon">🚀</span>
+                    <div class="expertise-title">Big Data Technologies</div>
+                    <div class="expertise-items">
+                        <span class="expertise-item">Apache Spark</span>
+                        <span class="expertise-item">Kafka</span>
+                        <span class="expertise-item">Hadoop</span>
+                        <span class="expertise-item">Databricks</span>
+                        <span class="expertise-item">EMR</span>
+                        <span class="expertise-item">Hive</span>
+                    </div>
+                </div>
+                
+                <div class="expertise-card">
+                    <span class="expertise-icon">🤖</span>
+                    <div class="expertise-title">ML & Analytics</div>
+                    <div class="expertise-items">
+                        <span class="expertise-item">TensorFlow</span>
+                        <span class="expertise-item">PyTorch</span>
+                        <span class="expertise-item">Scikit-learn</span>
+                        <span class="expertise-item">MLOps</span>
+                        <span class="expertise-item">NLP</span>
+                        <span class="expertise-item">A/B Testing</span>
+                    </div>
+                </div>
+                
+                <div class="expertise-card">
+                    <span class="expertise-icon">📊</span>
+                    <div class="expertise-title">Visualization & BI</div>
+                    <div class="expertise-items">
+                        <span class="expertise-item">Tableau</span>
+                        <span class="expertise-item">Power BI</span>
+                        <span class="expertise-item">Looker</span>
+                        <span class="expertise-item">QuickSight</span>
+                        <span class="expertise-item">D3.js</span>
+                        <span class="expertise-item">Dashboards</span>
+                    </div>
+                </div>
+                
+                <div class="expertise-card">
+                    <span class="expertise-icon">🏢</span>
+                    <div class="expertise-title">Domain Expertise</div>
+                    <div class="expertise-items">
+                        <span class="expertise-item">Healthcare</span>
+                        <span class="expertise-item">Banking</span>
+                        <span class="expertise-item">Insurance</span>
+                        <span class="expertise-item">HIPAA</span>
+                        <span class="expertise-item">Compliance</span>
+                        <span class="expertise-item">Risk Analytics</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Progress Visualization -->
+            <div class="skills-visualization">
+                <h3 style="color: var(--accent-color); margin-bottom: 25px;">Technical Proficiency</h3>
+                
+                <div class="skill-bar">
+                    <div class="skill-header">
+                        <span class="skill-name">Cloud Platforms (AWS, Azure, GCP)</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-header">
+                        <span class="skill-name">Data Engineering & ETL</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-header">
+                        <span class="skill-name">Python & SQL</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-header">
+                        <span class="skill-name">Big Data (Spark, Kafka, Hadoop)</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-header">
+                        <span class="skill-name">Machine Learning & AI</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-bar">
+                    <div class="skill-header">
+                        <span class="skill-name">DevOps & CI/CD</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%;"></div>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -418,5 +689,23 @@
         
         <p style="text-align: center; margin-top: 30px;">⭐️ From <a href="https://github.com/krishna-husky">Krishna Teja Samudrala</a></p>
     </footer>
+    
+    <script>
+        // Animate skill bars when they come into view
+        const skillBars = document.querySelectorAll('.skill-progress-bar');
+        const skillObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 100);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        skillBars.forEach(bar => skillObserver.observe(bar));
+    </script>
 </body>
 </html>
