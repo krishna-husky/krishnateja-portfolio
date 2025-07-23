@@ -1,4 +1,4 @@
-## Hi 👋, I'm Krishna Teja Samudrala! 
+## Hi 👋, I'm Krishna Teja! 
 ### About me: 
 I am a driven Data enthusiast with a passion for uncovering insights from data and building innovative solutions. With a strong background in Data Analytics Engineering, and extensive experience in Python and SQL, I have developed a diverse skill set that spans machine learning, statistical modeling, and data visualization.
 
