@@ -3,30 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Meta Tags for SEO -->
+    <meta name="description" content="Krishna Teja - Analytics & Data Engineer with 5+ years experience in building scalable data solutions across healthcare, finance, and insurance.">
+    <meta name="keywords" content="Data Engineer, Analytics Engineer, AWS, Azure, GCP, Machine Learning, Big Data">
+    <meta property="og:title" content="Krishna Teja - Analytics & Data Engineer">
+    <meta property="og:description" content="Experienced Data Engineer specializing in cloud platforms, real-time streaming, and ML pipelines.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://krishna-teja.vercel.app">
+    
     <title>Krishna Teja - Analytics & Data Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0a0a0a;
-            --bg-secondary: #111111;
-            --bg-card: #161616;
-            --bg-hover: #1a1a1a;
-            --text-primary: #e4e4e7;
-            --text-secondary: #a1a1aa;
-            --text-tertiary: #71717a;
-            --accent-primary: #3b82f6;
-            --accent-secondary: #60a5fa;
-            --accent-tertiary: #2563eb;
-            --border-color: #27272a;
-            --border-hover: #3f3f46;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --gradient-1: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            --gradient-2: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            --bg-secondary: #0f0f0f;
+            --bg-card: #141414;
+            --bg-card-hover: #1a1a1a;
+            --bg-accent: #1e1e1e;
+            
+            --text-primary: #ffffff;
+            --text-secondary: #b4b4b4;
+            --text-tertiary: #6b6b6b;
+            
+            --accent-primary: #4a9eff;
+            --accent-secondary: #66b3ff;
+            --accent-glow: rgba(74, 158, 255, 0.4);
+            
+            --success: #4ade80;
+            --warning: #fbbf24;
+            --danger: #f87171;
+            
+            --border-color: #262626;
+            --border-hover: #404040;
+            
+            --gradient-primary: linear-gradient(135deg, #4a9eff 0%, #0080ff 100%);
+            --gradient-hero: linear-gradient(180deg, rgba(74, 158, 255, 0.1) 0%, transparent 100%);
+            --gradient-card: linear-gradient(135deg, rgba(74, 158, 255, 0.05) 0%, transparent 100%);
+            
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.8);
+            --shadow-glow: 0 0 40px rgba(74, 158, 255, 0.3);
         }
 
         * {
@@ -35,18 +52,48 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Updated Typography Scale */
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 15px;
             line-height: 1.6;
             color: var(--text-primary);
             background-color: var(--bg-primary);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Scrollbar */
+        /* Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(74, 158, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(74, 158, 255, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 12px;
         }
 
         ::-webkit-scrollbar-track {
@@ -55,125 +102,165 @@
 
         ::-webkit-scrollbar-thumb {
             background: var(--border-color);
-            border-radius: 5px;
+            border-radius: 6px;
+            border: 2px solid var(--bg-secondary);
         }
 
         ::-webkit-scrollbar-thumb:hover {
             background: var(--border-hover);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* Header Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--gradient-hero);
+            padding: 40px 0;
         }
 
-        /* Header Section */
-        header {
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 80px 0 60px;
+        .hero-content {
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.03em;
+            background: linear-gradient(to right, #ffffff 0%, #4a9eff 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
-            opacity: 0.05;
-            animation: pulse 15s ease-in-out infinite;
+        .cta-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(74, 158, 255, 0.3);
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(74, 158, 255, 0.5);
         }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
+        .cta-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
         }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .cta-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
         }
 
-        .tagline {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-
-        .contact-bar {
+        /* Contact Links */
+        .contact-links {
             display: flex;
-            gap: 25px;
+            justify-content: center;
+            gap: 24px;
             flex-wrap: wrap;
-            font-size: 14px;
         }
 
         .contact-link {
-            color: var(--text-secondary);
-            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
             transition: all 0.3s;
-            background: var(--bg-card);
+            position: relative;
         }
 
         .contact-link:hover {
             color: var(--accent-primary);
-            border-color: var(--accent-primary);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
         }
 
-        /* Navigation */
-        nav {
-            background: var(--bg-primary);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-            background: rgba(10, 10, 10, 0.8);
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-            gap: 40px;
-        }
-
-        .nav-item {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-item::after {
+        .contact-link::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -4px;
             left: 0;
             width: 0;
             height: 2px;
@@ -181,153 +268,164 @@
             transition: width 0.3s;
         }
 
-        .nav-item:hover {
-            color: var(--accent-primary);
-        }
-
-        .nav-item:hover::after {
+        .contact-link:hover::after {
             width: 100%;
         }
 
-        /* Section Styles */
+        /* Floating Navigation */
+        .floating-nav {
+            position: fixed;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .floating-nav.visible {
+            opacity: 1;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-dot:hover {
+            background: var(--accent-primary);
+            transform: scale(1.5);
+        }
+
+        .nav-dot.active {
+            background: var(--accent-primary);
+        }
+
+        .nav-dot::before {
+            content: attr(data-title);
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-dot:hover::before {
+            opacity: 1;
+        }
+
+        /* Sections with better spacing */
         section {
             padding: 80px 0;
             position: relative;
         }
 
-        section::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 1px;
-            background: var(--border-color);
-        }
-
-        section:last-child::after {
-            display: none;
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
             font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 40px;
+            margin-bottom: 12px;
             position: relative;
             display: inline-block;
+            letter-spacing: -0.02em;
         }
 
-        h2::before {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--gradient-1);
-            border-radius: 2px;
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-tertiary);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Summary Section */
-        .summary {
-            max-width: 900px;
-        }
-
-        .summary-item {
-            margin-bottom: 20px;
-            padding: 20px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .summary-item:hover {
-            border-color: var(--accent-primary);
-            transform: translateX(5px);
-        }
-
-        .summary-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .summary-item:hover::before {
-            opacity: 1;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
+        /* Skills Section */
+        .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
         }
 
-        .skill-category {
+        .skill-card {
             background: var(--bg-card);
-            padding: 25px;
-            border-radius: 12px;
             border: 1px solid var(--border-color);
-            transition: all 0.3s;
+            border-radius: 16px;
+            padding: 32px;
             position: relative;
             overflow: hidden;
+            transition: all 0.3s;
         }
 
-        .skill-category::before {
+        .skill-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-1);
+            background: var(--gradient-card);
             opacity: 0;
             transition: opacity 0.3s;
         }
 
-        .skill-category:hover {
-            transform: translateY(-5px);
+        .skill-card:hover {
+            transform: translateY(-8px);
             border-color: var(--accent-primary);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
         }
 
-        .skill-category:hover::before {
-            opacity: 0.05;
+        .skill-card:hover::before {
+            opacity: 1;
         }
 
-        .skill-category h3 {
-            font-size: 16px;
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .skill-title {
+            font-size: 20px;
             font-weight: 600;
-            color: var(--accent-secondary);
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
+            margin-bottom: 16px;
+            color: var(--text-primary);
         }
 
-        .skill-tags {
+        .skill-items {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            position: relative;
-            z-index: 1;
+            gap: 8px;
         }
 
         .skill-tag {
-            background: var(--bg-hover);
+            background: var(--bg-accent);
             border: 1px solid var(--border-color);
             padding: 6px 14px;
-            border-radius: 6px;
+            border-radius: 20px;
             font-size: 13px;
             color: var(--text-secondary);
             transition: all 0.3s;
@@ -337,130 +435,161 @@
         .skill-tag:hover {
             border-color: var(--accent-primary);
             color: var(--accent-primary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
+            background: rgba(74, 158, 255, 0.1);
         }
 
-        /* Experience Section */
-        .experience-timeline {
+        /* Experience Timeline */
+        .timeline {
             position: relative;
-            padding-left: 40px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .experience-timeline::before {
+        .timeline::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 30px;
             top: 0;
             width: 2px;
             height: 100%;
-            background: var(--border-color);
+            background: linear-gradient(to bottom, var(--accent-primary), transparent);
+            opacity: 0.3;
         }
 
-        .experience-item {
-            margin-bottom: 50px;
+        .timeline-item {
             position: relative;
+            padding-left: 80px;
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn 0.6s ease-out forwards;
         }
 
-        .experience-item::before {
-            content: '';
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-dot {
             position: absolute;
-            left: -41px;
+            left: 20px;
             top: 0;
-            width: 12px;
-            height: 12px;
+            width: 20px;
+            height: 20px;
             background: var(--accent-primary);
-            border: 3px solid var(--bg-primary);
+            border: 4px solid var(--bg-primary);
             border-radius: 50%;
-            z-index: 1;
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.5);
         }
 
-        .experience-card {
+        .timeline-content {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 16px;
+            padding: 32px;
             transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
         }
 
-        .experience-card:hover {
-            border-color: var(--accent-primary);
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            height: 4px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
 
-        .company-header {
+        .timeline-content:hover::before {
+            opacity: 1;
+        }
+
+        .timeline-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            flex-wrap: wrap;
             gap: 20px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
-        .company-info {
-            flex: 1;
-        }
-
-        .company {
-            font-size: 20px;
-            font-weight: 600;
+        .company-name {
+            font-size: 24px;
+            font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
-        .role {
-            font-size: 16px;
-            color: var(--accent-secondary);
+        .job-title {
+            font-size: 18px;
+            color: var(--accent-primary);
             font-weight: 500;
         }
 
-        .duration {
-            font-size: 14px;
-            color: var(--text-tertiary);
-            padding: 6px 14px;
-            background: var(--bg-hover);
+        .timeline-date {
+            background: var(--bg-accent);
             border: 1px solid var(--border-color);
-            border-radius: 6px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
             font-family: 'JetBrains Mono', monospace;
         }
 
-        .experience-list {
-            list-style: none;
-            padding: 0;
+        .timeline-description {
+            margin-top: 20px;
         }
 
-        .experience-list li {
+        .timeline-description li {
             position: relative;
             padding-left: 24px;
-            margin-bottom: 12px;
-            font-size: 14px;
+            margin-bottom: 16px;
+            font-size: 15px;
             line-height: 1.8;
             color: var(--text-secondary);
+            list-style: none;
         }
 
-        .experience-list li::before {
-            content: '▸';
+        .timeline-description li::before {
+            content: '→';
             position: absolute;
             left: 0;
             color: var(--accent-primary);
             font-weight: bold;
         }
 
-        /* Projects Section */
-        .project-grid {
+        /* Projects Grid */
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
         }
 
         .project-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 16px;
+            overflow: hidden;
             transition: all 0.3s;
             position: relative;
-            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card::before {
@@ -469,52 +598,80 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
-            background: var(--gradient-1);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-            transform-origin: left;
+            height: 200px;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            transition: opacity 0.3s;
         }
 
         .project-card:hover {
-            border-color: var(--accent-primary);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
-            transform: translateY(-5px);
+            border-color: var(--accent-primary);
         }
 
         .project-card:hover::before {
-            transform: scaleX(1);
+            opacity: 0.2;
+        }
+
+        .project-content {
+            padding: 32px;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(74, 158, 255, 0.3);
         }
 
         .project-title {
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 22px;
+            font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .project-description {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--text-secondary);
             line-height: 1.8;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            flex: 1;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 24px;
         }
 
-        .tech-badge {
-            background: var(--bg-hover);
-            border: 1px solid var(--border-color);
+        .tech-tag {
+            background: rgba(74, 158, 255, 0.1);
+            border: 1px solid rgba(74, 158, 255, 0.3);
+            color: var(--accent-primary);
             padding: 4px 12px;
-            border-radius: 4px;
+            border-radius: 20px;
             font-size: 12px;
-            color: var(--text-tertiary);
             font-family: 'JetBrains Mono', monospace;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 16px;
+            margin-top: auto;
         }
 
         .project-link {
@@ -523,140 +680,165 @@
             gap: 8px;
             color: var(--accent-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 15px;
+            font-weight: 600;
             transition: all 0.3s;
-            padding: 8px 16px;
-            border: 1px solid var(--accent-primary);
-            border-radius: 6px;
         }
 
         .project-link:hover {
-            background: var(--accent-primary);
-            color: var(--bg-primary);
-            transform: translateX(5px);
+            transform: translateX(4px);
         }
 
         /* Education Section */
         .education-card {
             background: var(--bg-card);
-            padding: 30px;
-            border-radius: 12px;
             border: 1px solid var(--border-color);
-            transition: all 0.3s;
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .education-card:hover {
-            border-color: var(--accent-primary);
-            box-shadow: var(--shadow-lg);
+        .education-card::before {
+            content: '🎓';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 120px;
+            opacity: 0.05;
         }
 
-        .degree {
-            font-size: 20px;
-            font-weight: 600;
+        .education-header {
+            margin-bottom: 24px;
+        }
+
+        .degree-name {
+            font-size: 26px;
+            font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 8px;
         }
 
-        .university {
-            font-size: 16px;
-            color: var(--accent-secondary);
-            margin-bottom: 5px;
+        .university-name {
+            font-size: 20px;
+            color: var(--accent-primary);
+            margin-bottom: 8px;
         }
 
-        .ta-role {
-            font-size: 14px;
-            color: var(--text-tertiary);
+        .education-role {
+            font-size: 16px;
+            color: var(--text-secondary);
             font-style: italic;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .coursework {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.8;
+            background: var(--bg-accent);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
         }
 
-        .coursework strong {
+        .coursework-title {
+            font-size: 14px;
+            font-weight: 600;
             color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .coursework-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .course-tag {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
+
+        .course-tag:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
         }
 
         /* Footer */
         footer {
             background: var(--bg-secondary);
-            padding: 60px 0;
-            text-align: center;
-            margin-top: 80px;
+            padding: 80px 0 40px;
+            margin-top: 100px;
             border-top: 1px solid var(--border-color);
+            text-align: center;
         }
 
         .footer-content {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+        }
+
+        .footer-cta {
+            margin-bottom: 40px;
+        }
+
+        .footer-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 24px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
         }
 
         .footer-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 14px;
-            padding: 8px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
             transition: all 0.3s;
         }
 
         .footer-link:hover {
-            color: var(--accent-primary);
+            background: var(--bg-card-hover);
             border-color: var(--accent-primary);
+            color: var(--accent-primary);
             transform: translateY(-2px);
         }
 
-        .footer-text {
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
             color: var(--text-tertiary);
-            font-size: 13px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-content {
-                flex-wrap: wrap;
-                gap: 20px;
-                padding: 15px 0;
-            }
-            
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .company-header {
-                flex-direction: column;
-            }
-            
-            .experience-timeline {
-                padding-left: 20px;
-            }
-            
-            .experience-item::before {
-                left: -21px;
-            }
+            font-size: 14px;
         }
 
         /* Animations */
-        @keyframes fadeIn {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -664,32 +846,120 @@
             }
         }
 
-        .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 60px 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .floating-nav {
+                display: none;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+            }
+
+            .timeline-dot {
+                left: 10px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--bg-secondary);
+            z-index: 9999;
+        }
+
+        .scroll-progress-bar {
+            height: 100%;
+            background: var(--gradient-primary);
+            width: 0%;
+            transition: width 0.3s;
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-dot active" data-title="Home" data-section="hero"></div>
+        <div class="nav-dot" data-title="Skills" data-section="skills"></div>
+        <div class="nav-dot" data-title="Experience" data-section="experience"></div>
+        <div class="nav-dot" data-title="Projects" data-section="projects"></div>
+        <div class="nav-dot" data-title="Education" data-section="education"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
         <div class="container">
-            <div class="header-content">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    <span>Open to new opportunities</span>
+                </div>
+                
                 <h1>Krishna Teja</h1>
-                <p class="tagline">Analytics & Data Engineer | Cloud Data Engineering </p>
-                <div class="contact-bar">
+                <p class="hero-subtitle">Analytics & Data Engineer</p>
+                <p class="hero-description">
+                    Seasoned Data Engineer with 5+ years in analytics and engineering across healthcare, banking, and insurance, building scalable data solutions through collaboration with cross-functional teams
+                </p>
+                
+                <div class="cta-group">
+                    <a href="https://drive.google.com/file/d/1_EwlfxtJKh8hPguq0Zp2U690fmZtOBXl/view?usp=sharing" target="_blank" class="cta-button cta-primary">
+                        <span>📄</span>
+                        <span>Hire Me</span>
+                    </a>
+                    <a href="mailto:tejakrishna.0109@gmail.com" class="cta-button cta-secondary">
+                        <span>✉️</span>
+                        <span>Reach Me</span>
+                    </a>
+                </div>
+                
+                <div class="contact-links">
                     <a href="tel:+12025997357" class="contact-link">
                         <span>📞</span>
                         <span>(202) 599-7357</span>
                     </a>
-                    <a href="mailto:tejakrishna.0109@gmail.com" class="contact-link">
-                        <span>✉️</span>
-                        <span>tejakrishna.0109@gmail.com</span>
-                    </a>
                     <a href="https://www.linkedin.com/in/krishnateja-s/" target="_blank" class="contact-link">
-                        <span>🔗</span>
+                        <span>💼</span>
                         <span>LinkedIn</span>
                     </a>
                     <a href="https://github.com/krishna-husky" target="_blank" class="contact-link">
-                        <span>💻</span>
+                        <span>🚀</span>
                         <span>GitHub</span>
                     </a>
                     <a href="https://public.tableau.com/app/profile/krishna.teja.1736/vizzes" target="_blank" class="contact-link">
@@ -699,322 +969,312 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <nav>
+    <!-- Skills Section -->
+    <section id="skills">
         <div class="container">
-            <div class="nav-content">
-                <a href="#summary" class="nav-item">Summary</a>
-                <a href="#skills" class="nav-item">Skills</a>
-                <a href="#experience" class="nav-item">Experience</a>
-                <a href="#projects" class="nav-item">Projects</a>
-                <a href="#education" class="nav-item">Education</a>
+            <div class="section-header">
+                <h2>Technical Expertise</h2>
+                <p class="section-subtitle">
+                    Expert in multi-cloud architectures with comprehensive skillset spanning modern data engineering tools
+                </p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3 class="skill-title">Cloud Platforms</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Redshift</span>
+                        <span class="skill-tag">BigQuery</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3 class="skill-title">Big Data & Streaming</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Apache Kafka</span>
+                        <span class="skill-tag">Spark</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">Kinesis</span>
+                        <span class="skill-tag">dbt</span>
+                        <span class="skill-tag">Hadoop</span>
+                        <span class="skill-tag">Hive</span>
+                        <span class="skill-tag">NiFi</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3 class="skill-title">ML & Analytics</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">SageMaker</span>
+                        <span class="skill-tag">Azure OpenAI</span>
+                        <span class="skill-tag">Vertex AI</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3 class="skill-title">Visualization & BI</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Looker</span>
+                        <span class="skill-tag">QuickSight</span>
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">Domo</span>
+                        <span class="skill-tag">Alteryx</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3 class="skill-title">Databases & Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PySpark</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">Cassandra</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3 class="skill-title">DevOps & Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Agile</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main>
-        <section id="summary" class="fade-in">
-            <div class="container">
-                <h2>Professional Summary</h2>
-                <div class="summary">
-                    <div class="summary-item">
-                        Seasoned Data Engineer with 5 years in Analytics and Data Engineering across healthcare, banking, and insurance, transforming regulatory requirements (HIPAA, Basel III, SOX) and standards (HL7/FHIR) into scalable data products through collaborative partnerships with clinical, executive, and fraud teams.
-                    </div>
-                    <div class="summary-item">
-                        Expert in multi-cloud architectures using AWS (Kinesis, Glue, SageMaker, Redshift, SNS/SQS), Azure (Databricks, Delta Lake, Synapse), and GCP (BigQuery, dbt, Vertex AI), alongside tools like Kafka, Airflow, CDC, Great Expectations, and complex event processing for real-time streaming, data quality, and optimization.
-                    </div>
-                    <div class="summary-item">
-                        Proficient in MLOps and analytics platforms with Tableau, Power BI, Looker, MLflow, Docker, Kubernetes, and CI/CD (Jenkins/Git), delivering executive dashboards, self-service BI, and ML pipelines that drive efficiency and insights.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="fade-in">
-            <div class="container">
-                <h2>Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Libraries & Frameworks</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">scikit-learn</span>
-                            <span class="skill-tag">Matplotlib</span>
-                            <span class="skill-tag">Seaborn</span>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">PySpark</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Databases</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">Oracle</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Cassandra</span>
-                            <span class="skill-tag">DynamoDB</span>
-                            <span class="skill-tag">SQL Server</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Big Data Technologies</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Apache Kafka</span>
-                            <span class="skill-tag">Apache Airflow</span>
-                            <span class="skill-tag">Apache Spark</span>
-                            <span class="skill-tag">Hadoop</span>
-                            <span class="skill-tag">Hive</span>
-                            <span class="skill-tag">DBT</span>
-                            <span class="skill-tag">Matillion</span>
-                            <span class="skill-tag">Fivetran</span>
-                            <span class="skill-tag">NiFi</span>
-                            <span class="skill-tag">Dagster</span>
-                            <span class="skill-tag">Flyte</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Data Analysis</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Data Cleaning</span>
-                            <span class="skill-tag">Data Modeling</span>
-                            <span class="skill-tag">Data Wrangling</span>
-                            <span class="skill-tag">Data Warehousing</span>
-                            <span class="skill-tag">ETL</span>
-                            <span class="skill-tag">Forecasting</span>
-                            <span class="skill-tag">Data Lake</span>
-                            <span class="skill-tag">EDA</span>
-                            <span class="skill-tag">Feature Engineering</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Machine Learning</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Regression</span>
-                            <span class="skill-tag">Decision Tree</span>
-                            <span class="skill-tag">Random Forest</span>
-                            <span class="skill-tag">SVM</span>
-                            <span class="skill-tag">K-Means</span>
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">Azure OpenAI</span>
-                            <span class="skill-tag">Generative AI</span>
-                            <span class="skill-tag">PCA</span>
-                            <span class="skill-tag">A/B Testing</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Cloud Computing</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">AWS EC2</span>
-                            <span class="skill-tag">S3</span>
-                            <span class="skill-tag">Lambda</span>
-                            <span class="skill-tag">Glue</span>
-                            <span class="skill-tag">Athena</span>
-                            <span class="skill-tag">Kinesis</span>
-                            <span class="skill-tag">Azure Databricks</span>
-                            <span class="skill-tag">Data Factory</span>
-                            <span class="skill-tag">GCP BigQuery</span>
-                            <span class="skill-tag">Cloud Functions</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Data Warehousing</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Amazon Redshift</span>
-                            <span class="skill-tag">Snowflake</span>
-                            <span class="skill-tag">BigQuery</span>
-                            <span class="skill-tag">Delta Lake</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Data Visualization</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Tableau</span>
-                            <span class="skill-tag">Power BI</span>
-                            <span class="skill-tag">Looker</span>
-                            <span class="skill-tag">QuickSight</span>
-                            <span class="skill-tag">Domo</span>
-                            <span class="skill-tag">Alteryx</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Other Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Terraform</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">Jenkins</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">Agile</span>
-                            <span class="skill-tag">Scrum</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="fade-in">
-            <div class="container">
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
                 <h2>Professional Experience</h2>
-                <div class="experience-timeline">
-                    <div class="experience-item">
-                        <div class="experience-card">
-                            <div class="company-header">
-                                <div class="company-info">
-                                    <div class="company">GE Healthcare</div>
-                                    <div class="role">Data Engineer</div>
-                                </div>
-                                <div class="duration">May 2023 – Present</div>
+                <p class="section-subtitle">
+                    Building enterprise-scale data solutions that drive business value and innovation
+                </p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">GE Healthcare</h3>
+                                <p class="job-title">Data Engineer</p>
                             </div>
-                            <ul class="experience-list">
-                                <li>Architected enterprise streaming platform using Kinesis Data Streams, AWS Glue Streaming ETL, and Apache Airflow, processing 500,000+ HL7 FHIR messages daily with sub-200ms latency and DynamoDB for real-time metadata storage and fast lookups, enabling clinical decision support and patient risk alerting.</li>
-                                <li>Streamlined healthcare data storage using S3 Intelligent-Tiering, Parquet compression, and Delta Lake format, while optimizing Redshift schemas with STRUCT/ARRAY data types and cumulative aggregation techniques, reducing monthly raw clinical data footprint from 50TB to 10TB (80%) and enabling 5x faster analytical queries in Athena.</li>
-                                <li>Engineered complex event processing system with Lambda functions and Step Functions orchestration, implementing Modified Early Warning Score (MEWS) calculations that reduced sepsis detection time by 45%.</li>
-                                <li>Pioneered adaptive data quality framework using Great Expectations with custom healthcare validators, implementing statistical process control for NPI validation and medical coding integrity, achieving 91% data accuracy.</li>
-                                <li>Deployed machine learning pipeline using SageMaker, Python, and PySpark, developing predictive alerting algorithms with exponential smoothing models achieving 95% sensitivity in early warning detection across three hospital deployments.</li>
-                                <li>Instituted streaming data governance with automated PII masking using Named Entity Recognition models in Lambda, ensuring real-time HIPAA compliance for 8TB of migrated legacy Hadoop clinical data (migrated using AWS DMS).</li>
-                                <li>Crafted advanced analytics dashboards in Tableau with calculated fields and row-level security, integrating real-time patient cohort analysis.</li>
-                                <li>Enabled ad hoc queries via AWS Glue Data Catalog and Athena with AWS QuickSight, reducing manual reporting by 60% and accelerating dynamic clinical insights by 40% during peak analysis periods.</li>
-                                <li>Implemented CloudWatch monitoring with custom metrics, SNS notifications, and SQS alerts, cutting incident resolution by 45% and saving $12K/month via optimized Redshift management.</li>
-                            </ul>
+                            <span class="timeline-date">May 2023 – Present</span>
                         </div>
+                        <ul class="timeline-description">
+                            <li>Architected enterprise streaming platform processing 500K+ HL7 FHIR messages daily with sub-200ms latency using Kinesis, Glue, and DynamoDB</li>
+                            <li>Reduced clinical data footprint by 80% (50TB to 10TB) through S3 Intelligent-Tiering and Delta Lake optimization</li>
+                            <li>Deployed ML pipeline achieving 95% sensitivity in patient early warning detection across 3 hospitals</li>
+                            <li>Implemented real-time HIPAA compliance framework with automated PII masking using NER models</li>
+                            <li>Cut incident resolution time by 45% and saved $12K/month through CloudWatch monitoring and optimized Redshift management</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="experience-card">
-                            <div class="company-header">
-                                <div class="company-info">
-                                    <div class="company">Yes Bank</div>
-                                    <div class="role">Data Engineer</div>
-                                </div>
-                                <div class="duration">Feb 2021 – Aug 2022</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Yes Bank</h3>
+                                <p class="job-title">Data Engineer</p>
                             </div>
-                            <ul class="experience-list">
-                                <li>Constructed medallion architecture based modern data lakehouse using Azure Databricks, Delta Lake, and PySpark, applying Z-Order clustering optimization that reduced fraud investigation query time by 93% on 4 TB+ daily transactions.</li>
-                                <li>Assembled real-time fraud detection engine using Change Data Capture (CDC), Apache Kafka, Azure Event Hubs, and Spark Structured Streaming, implementing approximate algorithms (HyperLogLog, Count-Min Sketch) achieving 35% false positive reduction with 15ms decision latency on real-time transaction changes.</li>
-                                <li>Refined banking data optimization using Azure Synapse Analytics with columnstore indexes, implementing dictionary encoding and delta compression achieving 73% storage reduction while maintaining regulatory audit integrity.</li>
-                                <li>Formulated ensemble ML models using Python, scikit-learn, and MLflow, implementing Random Forest and Gradient Boosting with sliding window features, improving fraud detection F1-score to 91.7%.</li>
-                                <li>Enhanced cloud infrastructure with Azure Kubernetes Service, Docker, and Helm, implementing blue-green deployment strategies and dynamic resource allocation reducing month-end reporting time by 56% for stakeholders.</li>
-                                <li>Systematized automated monitoring using Azure Monitor, custom PySpark functions, and Logic Apps, implementing statistical profiling with skewness and entropy analysis preventing 12 potential model degradation incidents.</li>
-                                <li>Delivered secure analytics platform with Power BI DirectQuery, Azure Active Directory, and row-level security, enabling self-service capabilities while maintaining Basel III compliance requirements and enable 50+ users by training.</li>
-                                <li>Automated delivery pipelines with Jenkins and Git integration, implementing comprehensive CI/CD workflows with automated testing and quality gates, reducing deployment time by 35%.</li>
-                            </ul>
+                            <span class="timeline-date">Feb 2021 – Aug 2022</span>
                         </div>
+                        <ul class="timeline-description">
+                            <li>Built medallion architecture data lakehouse on Azure Databricks, reducing fraud investigation time by 93% on 4TB+ daily transactions</li>
+                            <li>Developed real-time fraud detection engine achieving 35% false positive reduction with 15ms decision latency</li>
+                            <li>Improved fraud detection F1-score to 91.7% using ensemble ML models with Random Forest and Gradient Boosting</li>
+                            <li>Achieved 73% storage reduction through columnstore indexes while maintaining Basel III compliance</li>
+                            <li>Enabled self-service analytics for 50+ users with secure Power BI platform and comprehensive training</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="experience-card">
-                            <div class="company-header">
-                                <div class="company-info">
-                                    <div class="company">Allstate</div>
-                                    <div class="role">Data Engineer</div>
-                                </div>
-                                <div class="duration">Jun 2019 – Jan 2021</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="company-name">Allstate</h3>
+                                <p class="job-title">Data Engineer</p>
                             </div>
-                            <ul class="experience-list">
-                                <li>Built dimensional data warehouse using Google BigQuery, dbt, and Cloud Composer (Airflow), implementing Kimball methodology with sparse matrix optimization reducing actuarial processing time by 57%.</li>
-                                <li>Developed insurance analytics pipelines using Pub/Sub, Cloud Functions, and Dataflow, implementing Bloom filters and probabilistic data structures for de-duplication processing 150,000+ daily FNOL submissions (3TB) with 99.2% accuracy.</li>
-                                <li>Implemented data standardization framework using Python fuzzy matching algorithms (Jaro-Winkler) and BigQuery materialized views, improving customer master data quality to 89% across policy systems.</li>
-                                <li>Designed actuarial modeling system using statistical computing in R and Python, implementing GLM with gamma distribution for claim severity prediction achieving 15% improvement in reserve accuracy.</li>
-                                <li>Established CI/CD workflows using Cloud Build, Git, and automated dbt testing, creating comprehensive data lineage documentation for 85+ dimensional tables ensuring SOX compliance.</li>
-                                <li>Executed legacy system migration from on-premises PostgreSQL and Hadoop to GCP managed services using Dataflow batch jobs, implementing schema transformation and validation processes leading to 40% infrastructure cost reduction.</li>
-                                <li>Optimized analytical performance through BigQuery partition pruning, clustering strategies, and slot reservations, implementing cost management techniques reducing monthly compute costs by 32%.</li>
-                                <li>Created self-service BI platform using Looker dashboards with LookML modeling, integrating Vertex AI AutoML predictions for claim fraud propensity with 35% increase in actionable insights.</li>
-                                <li>Monitored pipeline health using Google Cloud Operations Suite with proactive alerting, reducing average failure response times by 30% and establishing data governance standards.</li>
-                                <li>Collaborated and communicated with cross-functional stakeholders using Jira for sprint management and Confluence for documentation, establishing knowledge transfer processes and learning enterprise data architecture principles.</li>
-                            </ul>
+                            <span class="timeline-date">Jun 2019 – Jan 2021</span>
                         </div>
+                        <ul class="timeline-description">
+                            <li>Constructed dimensional data warehouse on BigQuery reducing actuarial processing time by 57% using dbt and Cloud Composer</li>
+                            <li>Processed 150K+ daily insurance claims (3TB) with 99.2% accuracy using probabilistic data structures</li>
+                            <li>Achieved 15% improvement in reserve accuracy through GLM-based actuarial modeling system</li>
+                            <li>Reduced monthly compute costs by 32% through BigQuery optimization and partition strategies</li>
+                            <li>Led legacy system migration to GCP resulting in 40% infrastructure cost reduction</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projects" class="fade-in">
-            <div class="container">
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
                 <h2>Featured Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3 class="project-title">F1 Insights: Real-time Replay and Vehicle Analysis</h3>
+                <p class="section-subtitle">
+                    Innovative solutions showcasing technical depth and real-world impact
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🏎️</div>
+                        <h3 class="project-title">F1 Insights: Real-time Analytics Platform</h3>
                         <p class="project-description">
-                            Engineered end-to-end F1 analytics platform processing 10+ years of historical race data using dbt, Snowflake, and Apache Airflow (WAP pattern). Implemented real-time telemetry pipeline with Kafka, AWS EC2, and PostgreSQL for ingesting live vehicle data from multiple APIs; integrated Grafana dashboards for 1-second refresh rates on driver performance and strategic analysis.
+                            Engineered end-to-end F1 analytics platform processing 10+ years of historical race data. Built real-time telemetry pipeline with Kafka and AWS, integrated Grafana dashboards with 1-second refresh rates for strategic analysis.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-badge">dbt</span>
-                            <span class="tech-badge">Snowflake</span>
-                            <span class="tech-badge">Apache Airflow</span>
-                            <span class="tech-badge">Kafka</span>
-                            <span class="tech-badge">AWS EC2</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">Grafana</span>
+                            <span class="tech-tag">dbt</span>
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Airflow</span>
                         </div>
-                        <a href="https://github.com/krishna-husky/Formula-One-Analytics" target="_blank" class="project-link">
-                            View on GitHub →
-                        </a>
+                        <div class="project-links">
+                            <a href="https://github.com/krishna-husky/Formula-One-Analytics" target="_blank" class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="project-card">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🤖</div>
                         <h3 class="project-title">LLM RAG Model on Azure Databricks</h3>
                         <p class="project-description">
-                            Built RAG model on Azure Databricks with Databricks embedding model, Delta Lake as vector store, and LangChain for orchestration. Deployed Flask API endpoint enabling chatbot queries across 100+ documents for effective responses.
+                            Built RAG model with Databricks embedding model, Delta Lake vector store, and LangChain orchestration. Deployed Flask API endpoint enabling intelligent chatbot queries across 100+ documents.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-badge">Azure Databricks</span>
-                            <span class="tech-badge">LLM</span>
-                            <span class="tech-badge">Flask</span>
-                            <span class="tech-badge">Delta Lake</span>
-                            <span class="tech-badge">LangChain</span>
-                            <span class="tech-badge">Vector DB</span>
+                            <span class="tech-tag">Azure Databricks</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Delta Lake</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Vector DB</span>
                         </div>
-                        <a href="https://github.com/krishna-husky/RAG-using-Databricks" target="_blank" class="project-link">
-                            View on GitHub →
-                        </a>
+                        <div class="project-links">
+                            <a href="https://github.com/krishna-husky/RAG-using-Databricks" target="_blank" class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="education" class="fade-in">
-            <div class="container">
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
                 <h2>Education</h2>
-                <div class="education-card">
-                    <div class="degree">Master of Science in Data Analytics Engineering</div>
-                    <div class="university">Northeastern University, Boston, MA</div>
-                    <div class="ta-role">Machine Learning Teaching Assistant</div>
-                    <div class="coursework">
-                        <strong>Coursework:</strong> Database Management System, Data Warehousing, Cloud Computing and Distributed Systems, Advanced SQL, ML and Adv NLP
+                <p class="section-subtitle">
+                    Academic foundation in data engineering and analytics
+                </p>
+            </div>
+            
+            <div class="education-card">
+                <div class="education-header">
+                    <h3 class="degree-name">Master of Science in Data Analytics Engineering</h3>
+                    <p class="university-name">Northeastern University, Boston, MA</p>
+                    <p class="education-role">Machine Learning Teaching Assistant</p>
+                </div>
+                
+                <div class="coursework">
+                    <p class="coursework-title">Key Coursework:</p>
+                    <div class="coursework-list">
+                        <span class="course-tag">Database Management Systems</span>
+                        <span class="course-tag">Data Warehousing</span>
+                        <span class="course-tag">Cloud Computing</span>
+                        <span class="course-tag">Distributed Systems</span>
+                        <span class="course-tag">Advanced SQL</span>
+                        <span class="course-tag">Machine Learning</span>
+                        <span class="course-tag">Advanced NLP</span>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <a href="mailto:tejakrishna.0109@gmail.com" class="footer-link">Email</a>
-                    <a href="https://www.linkedin.com/in/krishnateja-s/" class="footer-link" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/krishna-husky" class="footer-link" target="_blank">GitHub</a>
+                <div class="footer-cta">
+                    <h3 class="footer-title">Ready to Transform Your Data Infrastructure?</h3>
+                    <p class="footer-subtitle">
+                        Let's discuss how I can help scale your data platform
+                    </p>
                 </div>
-                <p class="footer-text">© 2024 Krishna Teja. Built with passion for data engineering.</p>
+                
+                <div class="footer-links">
+                    <a href="mailto:tejakrishna.0109@gmail.com?subject=Data Engineering Opportunity" class="footer-link">
+                        <span>🚀</span>
+                        <span>Hire Me</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/krishnateja-s/" target="_blank" class="footer-link">
+                        <span>💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/krishna-husky" target="_blank" class="footer-link">
+                        <span>💻</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view" target="_blank" class="footer-link">
+                        <span>📄</span>
+                        <span>Resume PDF</span>
+                    </a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2024 Krishna Teja • Crafted with passion for data engineering excellence</p>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1028,24 +1288,84 @@
             });
         });
 
-        // Fade in animation on scroll
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollProgress + '%';
+        });
+
+        // Floating navigation
+        const sections = document.querySelectorAll('section[id]');
+        const navDots = document.querySelectorAll('.nav-dot');
+        const floatingNav = document.getElementById('floatingNav');
+
+        // Show floating nav after scrolling past hero
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                floatingNav.classList.add('visible');
+            } else {
+                floatingNav.classList.remove('visible');
+            }
+
+            // Update active nav dot
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navDots.forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.getAttribute('data-section') === current) {
+                    dot.classList.add('active');
+                }
+            });
+        });
+
+        // Nav dot click
+        navDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const section = document.getElementById(dot.getAttribute('data-section'));
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Remove old download functionality
+        // Schedule call button can link to Calendly or calendar booking tool
+
+        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(entries => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
+        // Observe all cards
+        document.querySelectorAll('.skill-card, .timeline-item, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
         });
+
+        // Dynamic year in footer
+        document.querySelector('.footer-bottom p').innerHTML = 
+            `© ${new Date().getFullYear()} Krishna Teja • Crafted with passion for data engineering excellence`;
     </script>
 </body>
 </html>
