@@ -78,11 +78,11 @@ I am a driven Data enthusiast with a passion for uncovering insights from data a
 
 #### Most Used Languages
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=krishnateja-samudrala&layout=compact&theme=radical&langs_count=4)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=krishna-husky&layout=compact&theme=radical&langs_count=4)
 
 #### 👀 Visitor Count
 
-![Visitor Count](https://komarev.com/ghpvc/?username=krishnateja-samudrala&color=green&style=flat)
+![Visitor Count](https://komarev.com/ghpvc/?username=krishna-husky&color=green&style=flat)
 
 
 
