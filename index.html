@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -25,17 +25,18 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 720px;
             margin: 0 auto;
             padding: 0 24px;
+            width: 100%;
         }
 
-        /* Header */
         header {
-            padding: 100px 0 80px;
+            padding: 80px 0 60px;
             animation: fadeInUp 0.8s ease-out;
         }
 
@@ -48,6 +49,22 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        .name {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .name-first {
+            color: #ffffff;
+        }
+
+        .name-last {
+            color: #ff8700;
         }
 
         h1 {
@@ -83,7 +100,7 @@
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 14px;
-            color: #888;
+            color: #00d4aa;
             margin-bottom: 32px;
             border: 1px solid #333;
         }
@@ -93,11 +110,21 @@
             height: 8px;
             background: #00d4aa;
             border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
         }
 
         .links {
             display: flex;
-            gap: 28px;
+            gap: 24px;
             flex-wrap: wrap;
         }
 
@@ -109,6 +136,7 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             padding: 4px 0;
+            word-break: break-word;
         }
 
         .links a::after {
@@ -118,7 +146,7 @@
             left: 0;
             width: 0;
             height: 1px;
-            background: #00d4aa;
+            background: #ff8700;
             transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -130,9 +158,8 @@
             width: 100%;
         }
 
-        /* Sections */
         .section {
-            margin-bottom: 100px;
+            margin-bottom: 80px;
             animation: fadeInUp 0.8s ease-out;
             animation-fill-mode: both;
         }
@@ -158,11 +185,10 @@
             left: 0;
             width: 40px;
             height: 2px;
-            background: #00d4aa;
+            background: #ff8700;
             border-radius: 1px;
         }
 
-        /* What I'm doing */
         .activities {
             display: flex;
             flex-direction: column;
@@ -170,10 +196,10 @@
         }
 
         .activity {
-            padding: 28px 0;
+            padding: 24px 0;
             border-bottom: 1px solid rgba(51, 51, 51, 0.6);
             display: flex;
-            gap: 24px;
+            gap: 20px;
             align-items: flex-start;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -186,7 +212,7 @@
             padding-left: 8px;
             background: rgba(26, 26, 26, 0.3);
             border-radius: 12px;
-            border-bottom-color: #00d4aa;
+            border-bottom-color: #ff8700;
         }
 
         .activity-icon {
@@ -204,13 +230,14 @@
         }
 
         .activity:hover .activity-icon {
-            background: rgba(0, 212, 170, 0.1);
-            border-color: #00d4aa;
+            background: rgba(255, 135, 0, 0.1);
+            border-color: #ff8700;
             transform: scale(1.05);
         }
 
         .activity-content {
             flex: 1;
+            min-width: 0;
         }
 
         .activity-title {
@@ -223,6 +250,7 @@
         .activity-description {
             color: #b0b0b0;
             line-height: 1.6;
+            word-wrap: break-word;
         }
 
         .activity-meta {
@@ -231,7 +259,6 @@
             margin-top: 8px;
         }
 
-        /* Experience */
         .experience-item {
             margin-bottom: 48px;
             padding-bottom: 32px;
@@ -279,6 +306,7 @@
             margin-bottom: 8px;
             position: relative;
             padding-left: 16px;
+            word-wrap: break-word;
         }
 
         .highlights li:before {
@@ -288,7 +316,6 @@
             color: #666;
         }
 
-        /* Projects */
         .projects {
             display: flex;
             flex-direction: column;
@@ -323,6 +350,7 @@
 
         .project-content {
             flex: 1;
+            min-width: 0;
         }
 
         .project-title {
@@ -336,6 +364,7 @@
             color: #b0b0b0;
             line-height: 1.6;
             margin-bottom: 16px;
+            word-wrap: break-word;
         }
 
         .project-tech {
@@ -356,30 +385,26 @@
         }
 
         .project-link {
-            color: #00d4aa;
+            color: #ff8700;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
+            word-break: break-all;
         }
 
         .project-link:hover {
             text-decoration: underline;
         }
 
-        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 32px;
         }
 
         .skill-category {
             padding-bottom: 24px;
             border-bottom: 1px solid #333;
-        }
-
-        .skill-category:last-child {
-            border-bottom: none;
         }
 
         .skill-name {
@@ -392,9 +417,9 @@
         .skill-list {
             color: #b0b0b0;
             line-height: 1.5;
+            word-wrap: break-word;
         }
 
-        /* Education */
         .education {
             padding: 32px;
             background: #1a1a1a;
@@ -418,93 +443,10 @@
 
         .education-meta {
             font-size: 14px;
-            color: #666;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            margin-bottom: 80px;
-        }
-
-        .testimonial {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            padding: 32px 0;
-            border-bottom: 1px solid #333;
-        }
-
-        .testimonial:last-child {
-            border-bottom: none;
-        }
-
-        .testimonial-avatar {
-            flex-shrink: 0;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            overflow: hidden;
-        }
-
-        .testimonial-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .testimonial-content {
-            flex: 1;
-        }
-
-        .testimonial-text {
-            color: #b0b0b0;
-            line-height: 1.6;
-            margin-bottom: 12px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .testimonial-role {
-            color: #666;
-            font-size: 12px;
-        }
-
-        /* Footer */
-        footer {
-            padding: 80px 0;
-            text-align: center;
-            border-top: 1px solid rgba(51, 51, 51, 0.6);
-            margin-top: 100px;
-        }
-
-        .footer-text {
-            color: #666;
-            font-size: 14px;
+            color: #ff8700;
             font-weight: 500;
         }
 
-        /* Smooth page transitions */
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        /* Focus states for accessibility */
-        .nav-link:focus,
-        .links a:focus {
-            outline: 2px solid #00d4aa;
-            outline-offset: 2px;
-            border-radius: 3px;
-        }
-
-        /* Personal touches */
         .personal-note {
             margin-top: 32px;
             padding: 24px;
@@ -522,29 +464,66 @@
         .personal-note p {
             color: #b0b0b0;
             line-height: 1.6;
+            word-wrap: break-word;
         }
 
-        /* Responsive */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(51, 51, 51, 0.6);
+            margin-top: 80px;
+        }
+
+        .footer-text {
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 0 20px;
+                padding: 0 16px;
+            }
+
+            header {
+                padding: 60px 0 40px;
+            }
+
+            .name {
+                font-size: 32px;
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 24px;
             }
 
             .intro {
                 font-size: 16px;
             }
 
+            .section-title {
+                font-size: 24px;
+            }
+
             .links {
                 gap: 16px;
+            }
+
+            .links a {
+                font-size: 13px;
             }
 
             .experience-header {
                 flex-direction: column;
                 align-items: start;
+            }
+
+            .company {
+                font-size: 18px;
             }
 
             .skills-grid {
@@ -556,6 +535,7 @@
             .project {
                 flex-direction: column;
                 gap: 16px;
+                padding: 20px 0;
             }
 
             .activity-icon,
@@ -563,9 +543,53 @@
                 align-self: flex-start;
             }
 
-            .testimonial {
+            .activity-title,
+            .project-title {
+                font-size: 16px;
+            }
+
+            .activity-description,
+            .project-description {
+                font-size: 14px;
+            }
+
+            .education {
+                padding: 24px 16px;
+            }
+
+            .degree {
+                font-size: 18px;
+            }
+
+            .section {
+                margin-bottom: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .name {
+                font-size: 28px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .intro {
+                font-size: 15px;
+            }
+
+            .links {
                 flex-direction: column;
-                gap: 16px;
+                gap: 12px;
+            }
+
+            .personal-note {
+                padding: 20px;
             }
         }
     </style>
@@ -573,9 +597,10 @@
 <body>
     <div class="container">
         <header>
+            <div class="name"><span class="name-first">Krishna</span> <span class="name-last">Teja</span></div>
             <h1>About me</h1>
             <div class="intro">
-                <p>I'm a Data Engineer from India, currently in the US. My passion lies in building data infrastructure that transforms how businesses make decisions. To be honest, I wasn't sold on data engineering during my Bachelor's. I was more fascinated by traditional software development. Everything changed during my Master's when I discovered the power of turning raw data into business gold. For anyone looking to get into tech, data engineering is where the magic happens. There's never been a better time to build systems that actually matter.</p>
+                <p>I'm a Data Engineer from India, currently in the US. My passion lies in building data infrastructure that transforms how businesses make decisions. To be honest, I wasn't sold on data engineering during my Bachelor's. I was more fascinated by data analytics and understanding patterns in data. Everything changed during my Master's when I discovered the power of turning raw data into business gold through robust engineering systems. For anyone looking to get into tech, data engineering is where the magic happens. There's never been a better time to build systems that actually matter.</p>
                 
                 <p>I have one of the most exciting introductions to enterprise data engineering. Landing a role at GE Healthcare put me at the forefront of healthcare analytics, working alongside some of the brightest minds in the industry. The fascinating part? Building real-time data pipelines from scratch that directly impact patient outcomes. I've learned an incredible amount about streaming architectures, ML at scale, and cloud infrastructure. All while optimizing for systems that handle life-critical data. It's heavy on innovation and research, with a lot of performance optimization for enterprise-grade healthcare systems.</p>
             </div>
@@ -784,19 +809,17 @@
             <div class="education">
                 <div class="degree">Master of Science in Data Analytics Engineering</div>
                 <div class="university">Northeastern University</div>
-                <div class="education-meta">Machine Learning Teaching Assistant • Dean's List</div>
+                <div class="education-meta">Machine Learning Teaching Assistant</div>
             </div>
         </section>
 
-
-
         <div class="personal-note">
             <h3>Personal</h3>
-            <p>When I'm not building data pipelines, I enjoy exploring Formula 1 analytics (hence my F1 project!), diving into the latest ML research papers, and occasionally binge-watching sci-fi series. I believe the best engineering solutions come from understanding both the technical and human sides of problems.</p>
+            <p>When I'm not building data pipelines, you'll find me deep in Formula 1 analytics (hence the F1 project!), exploring the latest ML research papers, or binge-watching sci-fi series. As a die-hard McLaren fan, I couldn't resist bringing that iconic papaya orange into this portfolio. Beyond the code and data, I believe the best engineering solutions emerge when you understand both the technical challenges and the humans they serve.</p>
         </div>
 
         <footer>
-            <div class="footer-text">© 2025 Krishna Teja. Built with curiosity and lots of coffee.</div>
+            <div class="footer-text">© 2025 Krishna Teja. Built with curiosity and energized by coffee.</div>
         </footer>
     </div>
 </body>
