@@ -663,13 +663,13 @@
                     <div class="company">GE Healthcare</div>
                     <div class="period">2023 – Present</div>
                 </div>
-                <div class="role">Data Engineer • Chicago, USA</div>
+                  <div class="role">Data Engineer • Chicago, USA</div>
                 <ul class="highlights">
-                    <li>Built scalable data ingestion pipeline using Kappa Architecture with Kinesis Data Streams, AWS Glue Streaming ETL, and MWAA processing 10TB+ monthly healthcare data at sub-500ms latency enabling real-time clinical decision support</li>
-                    <li>Engineered event processing layer with AWS Lambda and Step Functions transforming raw vital sign streams into MEWS calculations for early sepsis detection, reducing detection time by 35% across pilot programs</li>
-                    <li>Optimized data storage reducing costs by 80% from 50TB to 10TB monthly through S3 Intelligent-Tiering, Parquet compression, Delta Lake, and optimized Redshift schemas accelerating downstream analytics</li>
-                    <li>Deployed ML prediction models achieving 92% sensitivity using hybrid time-series models combining Holt-Winters exponential smoothing and ARIMA ensembles on Amazon SageMaker for patient risk alerting across three hospitals</li>
-                    <li>Established observability and governance using CloudWatch monitoring with custom metrics and SNS alerts reducing incident resolution time by 45% (saving $12K/month), plus AWS Glue Catalog ensuring HIPAA compliance across 200+ datasets</li>
+                    <li>Built scalable data pipeline using Kappa Architecture with Kinesis Data Streams, AWS Glue Streaming ETL, and MWAA processing 10TB+ monthly health data at sub-500ms latency, and implemented Snowflake Tasks, Streams, and Snowpipe for continuous auto-ingestion reducing data availability lag from hours to under 5 minutes across 35+ critical tables</li>
+                    <li>Developed Snowpark-based Python transformations within Snowflake replacing 10+ external PySpark jobs reducing data movement overhead by 28%, and optimized SNOWSQL reporting queries through clustering key tuning and search optimization service cutting execution time by 35% and Snowflake credit consumption by 18%</li>
+                    <li>Reduced clinical storage costs by 80% from 50TB to 10TB monthly through S3 Intelligent-Tiering, Parquet compression, and Delta Lake with optimized Redshift schemas using struct/array types and cumulative aggregation accelerating downstream analytics by 40%</li>
+                    <li>Achieved 92% sensitivity in patient risk prediction deploying hybrid ML models on SageMaker, built LLM-assisted ICD-10 coding system on Bedrock using RAG reducing manual coding time by 25% at 94% accuracy, and improved sepsis detection by 35% via MEWS event processing with Lambda and Step Functions</li>
+                    <li>Reduced operational incidents by 45% saving $12K/month through CloudWatch monitoring with custom metrics and SNS alerts across 25+ production pipelines, and established HIPAA-compliant data governance using Glue Catalog, Apache Atlas, and Great Expectations quality rules across 200+ datasets</li>
                 </ul>
             </div>
 
